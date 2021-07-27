@@ -252,6 +252,8 @@ class IPythonBackgroundKernelWrapper:
         kernel = OurIPythonKernel(
             session=self._session,
             shell_streams=[self._shell_stream, self._control_stream],
+            shell_stream=self._shell_stream,
+            control_stream=self._control_stream,
             iopub_socket=self._iopub_socket,
             log=self._logger,
             user_ns=self.user_ns,
